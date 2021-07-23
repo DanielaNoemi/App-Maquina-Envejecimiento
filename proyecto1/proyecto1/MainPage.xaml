@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="proyecto1.MainPage" >
+
+    
+    <StackLayout >
+       
+        <Frame BorderColor="LightBlue">
+            <Label Text="MÁQUINA DE ENVEJECIMIENTO ACELERADO" FontSize="Medium" TextColor="Black" BackgroundColor="White"  FontAttributes="Italic" XAlign="Center"/>
+ 
+        </Frame>
+       
+       <!--
+        <Frame >
+            <FlexLayout Direction="Column" >
+                <Label Text="Porcentaje de Temperatura:"  FontSize="Large" />
+                <ProgressBar x:Name="pgbTemperatura" ProgressColor="DarkRed"  AnchorX="100" AnchorY="80"></ProgressBar>
+            </FlexLayout>
+        </Frame>
+
+        <Frame>
+            <FlexLayout Direction="Column">
+                <Label Text="Porcentaje de Humedad:" FontSize="Large" />
+                <ProgressBar x:Name="pgbHumedad"  ProgressColor="DarkBlue" AnchorX="100" AnchorY="80"  ></ProgressBar>
+            </FlexLayout>
+        </Frame>
+        --> 
+
+        <FlexLayout >
+            <Frame Margin="5,5">
+                <FlexLayout Direction="Column">
+                    <Label Text="Estatus Luz:" FontSize="Large"/>
+                    <Label x:Name="estatusLuz" Text="" />
+                </FlexLayout>
+            </Frame>
+
+            <Frame Margin="5,5" >
+                <FlexLayout Direction="Column">
+                    <Label Text="Fecha:" FontSize="Large"/>
+                    <Label x:Name="fecha" Text="" />
+                </FlexLayout>
+            </Frame>
+
+        </FlexLayout>
+        <FlexLayout>
+            <Frame Margin="5,5" >
+                <FlexLayout Direction="Column">
+
+                    <Label  Text="Ciclo trabajo:" FontSize="Large"/>
+                    <Label x:Name="cicloTrabajo" Text=" " />
+                </FlexLayout>
+            </Frame>
+            <Frame Margin="5,5" >
+                <FlexLayout Direction="Column">
+
+                    <Label  Text="Id  prueba:" FontSize="Large"/>
+                    <Label x:Name="idPrueba" Text="" />
+                </FlexLayout>
+            </Frame>
+        </FlexLayout>
+
+        <Frame>
+            
+                <forms:ChartView x:Name="chartGrafica" HeightRequest="300" WidthRequest="300" />
+         
+        </Frame>
+
+        <!--<Button x:Name="btnEnviarMQTT" Text="Enviar MQTT"  Clicked="btnEnviarMQTT_Clicked"/>-->
+       
+
+    </StackLayout>
+
+</ContentPage>
